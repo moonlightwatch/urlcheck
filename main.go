@@ -52,5 +52,10 @@ func main() {
 		fmt.Println()
 	}
 
+	fmt.Println("--- Checking Content ---")
+	for _, line := range ContentCheck(target, ips) {
+		fmt.Println(line)
+	}
+
 	log.Println("Done")
 }
