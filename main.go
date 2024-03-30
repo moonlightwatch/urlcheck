@@ -7,8 +7,14 @@ import (
 	"strings"
 )
 
+var CurrentENV = "cmd"
+
 func main() {
-	target := os.Args[1]
+	runCMD(os.Args[1])
+
+}
+
+func runCMD(target string) {
 
 	fmt.Println("--- Checking HTTP delay ---")
 	delay, status := HTTPDelyCheck(target)
